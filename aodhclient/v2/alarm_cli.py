@@ -442,10 +442,8 @@ class CliAlarmCreate(show.ShowOne):
             parsed_args, ['event_type', 'query'])
         alarm['prometheus_rule'] = (
             utils.dict_from_parsed_args(parsed_args,
-                                        ['granularity', 'comparison_operator',
-                                         'threshold', 'aggregation_method',
-                                         'evaluation_periods', 'metric',
-                                         'resource_id', 'resource_type']))
+                                        ['comparison_operator', 'threshold',
+                                         'query']))
         alarm['gnocchi_resources_threshold_rule'] = (
             utils.dict_from_parsed_args(parsed_args,
                                         ['granularity', 'comparison_operator',
